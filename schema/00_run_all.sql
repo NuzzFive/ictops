@@ -1,11 +1,13 @@
 -- ============================================================
--- ICT 운영관리 DB 스키마 전체 실행
+-- ICT 운영관리 DB 스키마 전체 실행 (Oracle)
 -- 실행 순서: 01 마스터 → 02 관계 → 03 업무
 -- ============================================================
--- 사용법 (PostgreSQL): psql -f 00_run_all.sql
--- 또는 각 파일을 순서대로 실행
+-- 사용법 (SQL*Plus): sqlplus user/pass@db @00_run_all.sql
+-- 또는 SQL Developer 등에서 각 파일을 순서대로 실행
+-- ============================================================
+-- Oracle 12c 이상 (IDENTITY 컬럼 사용)
 -- ============================================================
 
-\ir 01_master_tables.sql
-\ir 02_relation_tables.sql
-\ir 03_business_tables.sql
+@01_master_tables.sql
+@02_relation_tables.sql
+@03_business_tables.sql
